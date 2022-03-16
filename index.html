@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Cars</title>
+</head>
+
+<body>
+    <header class="header">
+        <ul>
+            <li class="menu-1">
+                <a href="#">Home</a>
+            </li>
+            <li class="menu-2">
+                <a href="#">Devices</a>
+            </li>
+            <li class="menu-3">
+                <a href="#">Delivery & Payment</a>
+            </li>
+            <li class="menu-4">
+                <a href="#">Guarante</a>
+            </li>
+            <li class="menu-5">
+                <a href="#">About Us</a>
+            </li>
+            <li class="menu-6">
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <video class="video" id="video-elem" preload="auto" autoplay muted loop>
+        <source src="video/smoke.mp4" type="video/mp4"></source>
+    </video>
+    <main class="main">
+        <h1 class="title">NightCar</h1>
+        <figure>
+            <img class="image" src="images/cars/opala.png" alt="">
+        </figure>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js" integrity="sha512-jNJOCd1PIjJoUa1XTDKaPdBLNUe4OJTrltKG+70O5ghYZ943nTRGIzjObwC2JtSm1fG7T06GbUApR2eirIU/jA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            var timeline = gsap.timeline();
+            timeline.from(".menu-1", {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    delay: 0.5,
+                    ease: "power3.out",
+                })
+                .from(
+                    ".menu-2", {
+                        duration: 1,
+                        y: 50,
+                        opacity: 0,
+                        ease: "power3.out",
+                    },
+                    "-=0.8"
+                )
+                .from(
+                    ".menu-3", {
+                        duration: 1,
+                        y: 50,
+                        opacity: 0,
+                        ease: "power3.out",
+                    },
+                    "-=0.8"
+                )
+                .from(
+                    ".menu-4", {
+                        duration: 1,
+                        y: 50,
+                        opacity: 0,
+                        ease: "power3.out",
+                    },
+                    "-=0.8"
+                )
+                .from(
+                    ".menu-5", {
+                        duration: 1,
+                        y: 50,
+                        opacity: 0,
+                        ease: "power3.out",
+                    },
+                    "-=0.8"
+                )
+                .from(
+                    ".menu-6", {
+                        duration: 1,
+                        y: 50,
+                        opacity: 0,
+                        ease: "power3.out",
+                    },
+                    "-=0.8"
+                )
+                .from(
+                    ".title", {
+                        duration: 2,
+                        y: 60,
+                        opacity: 0,
+                        ease: "power3.out",
+                    },
+                    "-=0.8"
+                )
+                .from(
+                    ".image", {
+                        duration: 1,
+                        y: 30,
+                        opacity: 0,
+                        ease: "power3.out",
+                    },
+                    "-=0.8"
+                );
+        });
+    </script>
+</body>
+
+</html>
